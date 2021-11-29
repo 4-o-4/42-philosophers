@@ -2,7 +2,6 @@
 
 static int *freeValue(int *value) {
     free(value);
-    value = NULL;
     return NULL;
 }
 
@@ -11,11 +10,11 @@ static int *parserValue(const int argc, char **argv) {
     int j;
     int i;
 
+    j = 0;
+    i = 1;
     value = (int *)malloc(sizeof(int) * (argc - 1));
     if (!value)
         return NULL;
-    j = 0;
-    i = 1;
     while (i && argv[i])
         if ((value[j++] = atoi(argv[i++])) < 0)
             i ^= i;
@@ -32,6 +31,7 @@ int *ft_parser(const int argc, char **argv) {
 
     flag = 1;
     j = 0;
+    i = 1;
     while (flag && argv[j++] && !(i ^= i))
         while (flag && argv[j] && argv[j][i])
             if (!isdigit(argv[j][i++]) || i > INT_LEN)
