@@ -47,7 +47,7 @@ void *ft_watcher(void *tid) {
     t_philo *philo;
     int i;
 
-    philo = (t_philo *) tid;
+    philo = (t_philo *)tid;
     i = 0;
     while (!(i ^= i))
         while (i < philo->value[0])
@@ -59,7 +59,7 @@ void *ft_watcher(void *tid) {
 void *ft_philo(void *tid) {
     t_philo *philo;
 
-    philo = (t_philo *) tid;
+    philo = (t_philo *)tid;
     philo->ut1 = 0;
     while (philo->value[1] && philo->value[0] != 1) {
         takeFork(philo, lock);
