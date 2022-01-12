@@ -1,9 +1,5 @@
 #include "./includes/philosophers.h"
-
-static int *freeValue(int *value) {
-    free(value);
-    return NULL;
-}
+#include <ctype.h>
 
 static int *parserValue(const int argc, char **argv) {
     int *value;
@@ -16,12 +12,14 @@ static int *parserValue(const int argc, char **argv) {
     if (!value)
         return NULL;
     while (i && argv[i])
-        if ((value[j++] = atoi(argv[i++])) < 0)
+        if ((value[j++] = atoi(argv[i++])) <= 0)
             i ^= i;
     if (i)
         return value;
     printf(ERROR " arg%d - \"%s\"\n", j, argv[j]);
-    return freeValue(value);
+    free(value);
+    value = NULL;
+    return value;
 }
 
 int *ft_parser(const int argc, char **argv) {
