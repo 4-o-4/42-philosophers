@@ -1,4 +1,4 @@
-#include "./includes/philosophers.h"
+#include "philosophers.h"
 
 static int errArg(char *str) {
     printf(ERROR " %s\n", str);

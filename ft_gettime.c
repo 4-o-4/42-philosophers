@@ -1,4 +1,4 @@
-#include "./includes/philosophers.h"
+#include "philosophers.h"
 #include <unistd.h>
 #include <sys/time.h>
 

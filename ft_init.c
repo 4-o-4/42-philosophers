@@ -1,4 +1,4 @@
-#include "./includes/philosophers.h"
+#include "philosophers.h"
 
 static t_philo *setFork(int i, t_philo *philo, pthread_mutex_t *forkMutex) {
     philo[i].firstFork = forkMutex + i;

@@ -1,4 +1,4 @@
-#include "./includes/philosophers.h"
+#include "philosophers.h"
 
 static void takeFork(t_philo *philo, int forks) {
     if (forks) {

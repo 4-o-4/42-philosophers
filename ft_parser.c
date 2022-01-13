@@ -1,4 +1,4 @@
-#include "./includes/philosophers.h"
+#include "philosophers.h"
 #include <ctype.h>
 
 static int *parserValue(const int argc, char **argv) {
