@@ -14,7 +14,7 @@ void ft_usleep(long time, t_philo *philo) {
 
     i = ft_getTime() + time;
     while (i > ft_getTime() && philo->value[1])
-        usleep(200);
+        usleep(500);
 }
 
 int ft_free(int *value, pthread_mutex_t *forkMutex, t_philo *philo) {
