@@ -32,7 +32,6 @@ typedef struct s_philo {
 int     *ft_parser(const int argc, char **argv);
 int     ft_init(int argc, int *value);
 int     ft_free(int *value, pthread_mutex_t *forkMutex, t_philo *philo);
-int     ft_oddCounter(void);
 
 long    ft_getTime(void);
 

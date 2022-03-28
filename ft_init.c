@@ -32,7 +32,7 @@ static t_philo *initPhilo(int argc, int *value, pthread_mutex_t *forkMutex) {
     return setFork(value[0] - 1, philo, forkMutex);
 }
 
-static void createPhilo(int *value, t_philo *philo, pthread_t *threads) {
+static void createPhilo(const int *value, t_philo *philo, pthread_t *threads) {
     int i;
 
     i = 0;
@@ -40,7 +40,7 @@ static void createPhilo(int *value, t_philo *philo, pthread_t *threads) {
         pthread_create(threads + i, NULL, ft_philo, (void *) (philo + i));
         i += 2;
         if (i >= value[0] && !(i % 2))
-            i = ft_oddCounter();
+            i = 1;
     }
 }
 
