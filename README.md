@@ -28,6 +28,7 @@ make && ./philo arg1 arg2 arg3 arg4 (arg5)
 ./philo 5 400 200 200         # should die
 ./philo 5 800 200 200 7       # the simulation stops when each philosopher has eaten 7 times
 ./philo 21 30 10 10           # should live
+./philo 200 210 100 100       # should live
 ```
 
 #### Ressources
